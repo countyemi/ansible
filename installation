@@ -1,0 +1,10 @@
+sudo hostnamectl set-hostname ansible
+sudo adduser ansible
+echo "ansible ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
+sudo su ansible
+
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt install ansible -y
+
+sudo vim/etc/ansible/ansible.cfg
+host_key_checking>> change = false 
